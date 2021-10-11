@@ -1,0 +1,123 @@
+html, body
+{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: 'Gotham Medium';
+    src: url('assets/fonts/Gotham Medium');
+}
+
+#background
+{
+    background:linear-gradient(
+        rgba(0, 0, 0, 0.4), 
+        rgba(0, 0, 0, 0.4)
+      ),
+    url(../images/background.jpg);
+    background-size: cover;
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+#loginContainer *  /*Wszystkie elementy diva*/
+{
+    color: #fff;
+    font-weight: normal;
+    line-height: 1em;
+    box-sizing: border-box;
+}
+
+#loginContainer
+{
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    max-width: 1400px;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #fff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #fff;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #fff;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #fff;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #fff;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+   color:    #fff;
+}
+
+#inputContainer
+{
+    width: 400px;
+    padding: 44px;
+    float: left;
+    border-right: 1px solid #999;
+}
+
+#inputContainer h2
+{
+    text-align: center;
+    font-weight: bold;
+}
+
+#inputContainer input[type="text"],
+#inputContainer input[type="email"],
+#inputContainer input[type="password"]
+{
+display:block;
+background: transparent;
+border: 0;
+border-bottom: 1px solid #fff;
+height: 27px;
+line-height: 27px;
+width: 100%;
+}
+
+#inputContainer label 
+{
+    color: #a0a0a0;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+#inputContainer button
+{
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 280px;
+    color: #fff;
+    display: block;
+    font-size: 14px !important;
+    letter-spacing: 1px;
+    margin: 20px auto !important;
+    height: 42px;
+    width: 100%;;
+}
+
+#inputContainer button:hover
+{
+    cursor: pointer;
+}
+
+.hasAccount span
+{
+    font-weight: bold;
+    font-size: 12px;
+
+}
+.hasAccount
+{
+text-align: center;
+}
