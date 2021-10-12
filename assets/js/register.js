@@ -1,6 +1,5 @@
 $(document).ready(function()
 {
-    console.log("jest w pyte");
     $("#hideLogin").click(function()
     {
         $("#loginForm").hide();
