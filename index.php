@@ -1,24 +1,38 @@
-<?php
-include("includes/config.php");
+<?php include("includes/header.php"); ?>
 
-//session_destroy();
+<h1 class="PageHeadingBig">To Ci się może spodobać</h1>
 
-	if(isset($_SESSION['userLoggedIn']))
-	{
-		$userLoggedIn = $_SESSION['userLogged'];
-	}
-	else{
-		header('Location: register.php');
-	}
-?>
+<div class="gridViewContainer">
 
-<html>
-<head>
-	<title>Spotify Clone</title>
-</head>
+	<?php
+		$albumQuery = mysqli_query($connection, "SELECT * FROM albums ORDER BY RAND() LIMIT 10");
 
-<body>
-	Klik klak bang!!!
+		while($row = mysqli_fetch_array($albumQuery))
+		{
+			echo "<div class='gridViewItem'>
+				<img src='". $row['artworkPath'] ."'>
+
+				<div class='gridViewInfoTitle'>"
+					. $row['title'] .
+				"</div>
+
+				<div class='gridViewInfoArtist'>Artysta: "
+					. $row['artist'] .
+				"</div>
+
+				<div class='gridViewInfoGenre'>- "
+				. $row['genre'] .
+			" -</div>
+
+			</div>";
+		}
+	?>
+
+</div>
+
+<?php include("includes/footer.php"); ?>
+			
+
 </body>
 
 </html>
