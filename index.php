@@ -5,16 +5,19 @@
 <div class="gridViewContainer">
 
 	<?php
-		$albumQuery = mysqli_query($connection, "SELECT * FROM albums ORDER BY RAND() LIMIT 10");
-
+		$albumQuery = mysqli_query($connection, "SELECT * FROM albums ORDER BY RAND() LIMIT 14");
+			//Inner joina dać żeby wyświetlało nazwy
 		while($row = mysqli_fetch_array($albumQuery))
 		{
 			echo "<div class='gridViewItem'>
+				<a href='album.php?id=". $row["id"]. "'>
 				<img src='". $row['artworkPath'] ."'>
 
 				<div class='gridViewInfoTitle'>"
 					. $row['title'] .
 				"</div>
+
+				</a>
 
 				<div class='gridViewInfoArtist'>Artysta: "
 					. $row['artist'] .
